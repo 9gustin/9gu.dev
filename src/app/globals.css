@@ -101,6 +101,10 @@ body {
   @apply bg-neutral-100;
 }
 
+.rnr-container {
+  @apply flex flex-col gap-4;
+}
+
 .rnr-container p,
 .rnr-container span,
 .rnr-container a {
@@ -110,25 +114,25 @@ body {
 .rnr-container h1.rnr-heading_2,
 .rnr-container h1.rnr-heading_2 > * {
   font-size: 1.6rem;
-  margin: 32px 0 16px;
+  margin-top: 16px;
 }
 
 .rnr-container h2.rnr-heading_2,
 .rnr-container h2.rnr-heading_2 > * {
   font-size: 1.5rem;
-  margin: 24px 0 8px;
+  margin-top: 12px;
 }
 
 .rnr-container h3.rnr-heading_2,
 .rnr-container h3.rnr-heading_2 > * {
   font-size: 1.4rem;
-  margin: 20px 0 6px;
+  margin-top: 8px;
 }
 
 .rnr-container h4.rnr-heading_2,
 .rnr-container h4.rnr-heading_2 > * {
   font-size: 1.3rem;
-  margin: 16px 0 4px;
+  margin-top: 4px;
 }
 
 .rnr-container a:not(.title) {
