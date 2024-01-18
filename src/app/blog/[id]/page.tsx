@@ -5,7 +5,7 @@ import { IconChevronLeft } from "@tabler/icons-react";
 import Link from "next/link";
 import "@9gustin/react-notion-render/dist/index.css";
 
-export default async function Article({ params }) {
+export default async function Article({ params }: any) {
   if (!params?.id) return null;
   const page: any = await getPage(params.id);
   const blocks = await getBlocks(params.id);
