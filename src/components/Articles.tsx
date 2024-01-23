@@ -6,6 +6,7 @@ import {
   validatePage,
 } from "@/utils/article";
 import { toNow } from "@/utils/date";
+import { ClientDateHelper } from "./DateHelper";
 
 export const Articles = async () => {
   const db = await getDatabase();
@@ -22,7 +23,8 @@ export const Articles = async () => {
         Publicaciones
       </h2>
       <p className="text-sm text-center text-gray-500">
-        {nextRelease && `Próxima publicación: ${toNow(nextRelease)}`}
+        {nextRelease && `Próxima publicación: `}
+        <ClientDateHelper date={nextRelease} />
       </p>
       <ul className="flex flex-col items-center justify-center w-full h-full gap-4">
         {visiblePosts.map((props) => (

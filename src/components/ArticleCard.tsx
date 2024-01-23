@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { fromNow } from "@/utils/date";
 import { Article } from "@/types/article";
+import { ClientDateHelper } from "./DateHelper";
 
 export const ArticleCard = ({
   id,
@@ -22,7 +23,7 @@ export const ArticleCard = ({
           <CardHeader>
             <CardTitle>{title}</CardTitle>
             <span className="text-sm text-gray-500 font-light">
-              {fromNow(publishedAt)}
+              <ClientDateHelper date={publishedAt} from />
             </span>
             <CardDescription className="line-clamp-3">
               {description}
