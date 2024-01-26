@@ -6,6 +6,7 @@ import ArticleContent from "@/components/ArticleContent";
 import ArticleHeader from "@/components/ArticleHeader";
 import { Suspense } from "react";
 import { Loader } from "@/components/Loader";
+import { USER_CONFIG } from "@/config/user";
 
 export default async function Article({ params }: any) {
   if (!params?.id) return null;
