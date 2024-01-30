@@ -9,6 +9,7 @@ import { USER_CONFIG } from "@/config/user";
 import { Metadata } from "next";
 import { getPage } from "@/services/notion";
 import { getPageProps, validatePage } from "@/utils/article";
+import { cn } from "@/lib/utils";
 
 export default async function Article({ params }: any) {
   if (!params?.id) return null;
@@ -20,7 +21,12 @@ export default async function Article({ params }: any) {
   if (!pageWithProps || !validatePage(pageWithProps, true)) return null;
 
   return (
-    <article className="w-full flex flex-col gap-4 pt-4">
+    <article
+      className={cn(
+        "w-full flex flex-col gap-4 pt-4",
+        pageWithProps.preview && "bg-yellow-50 p-4 rounded-md"
+      )}
+    >
       <Suspense
         fallback={
           <div className="flex w-full justify-center">
@@ -28,6 +34,11 @@ export default async function Article({ params }: any) {
           </div>
         }
       >
+        {pageWithProps.preview && (
+          <div className=" bg-yellow-200 text-yellow-900 p-4 rounded-md">
+            Esta es una vista previa, el contenido puede cambiar
+          </div>
+        )}
         <ArticleHeader pageWithProps={pageWithProps} />
         <Suspense
           fallback={

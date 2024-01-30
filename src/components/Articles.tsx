@@ -14,7 +14,7 @@ export const Articles = async () => {
   const posts = db.map(getPageProps);
   const nextRelease = getNextReleaseDate(posts);
 
-  const visiblePosts = posts.filter(validatePage);
+  const visiblePosts = posts.filter((post) => validatePage(post, false));
 
   return (
     <section className="flex flex-col items-center justify-center w-full h-full gap-4">
