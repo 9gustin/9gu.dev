@@ -8,8 +8,8 @@ import {
 export const USER_CONFIG: UserConfig = {
   title: "Agus",
   username: "9gustin",
-  description:
-    "Hola! soy Agus, desarrollador frontend. En este blog escribo sobre cositas que me parecen interesantes",
+  description: `Hola! Soy desarrollador web. Arme este “blog” en donde voy a ir subiendo notas sobre temas que he tenido que aprender/desarrollar y me parecen interesantes.
+    La idea es dejar mi investigacion escrita en ellas para que sea facil de entender, analizar y aplicar el concepto.`,
   theme: "react",
   htmlTitle: "Blog | 9gustin",
   complementHTMLTitle: " | 9gustin",

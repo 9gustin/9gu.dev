@@ -18,7 +18,7 @@ export const ArticleCard = ({
 }: Article) => {
   return (
     <li className="flex flex-col w-full h-full gap-4">
-      <Link href={`/blog/${id}`}>
+      <Link href={`/notes/${id}`}>
         <Card className=" border-indigo-50">
           <CardHeader>
             <CardTitle>{title}</CardTitle>

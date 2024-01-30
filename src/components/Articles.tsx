@@ -5,7 +5,6 @@ import {
   getPageProps,
   validatePage,
 } from "@/utils/article";
-import { toNow } from "@/utils/date";
 import { ClientDateHelper } from "./DateHelper";
 
 export const Articles = async () => {
@@ -20,7 +19,7 @@ export const Articles = async () => {
   return (
     <section className="flex flex-col items-center justify-center w-full h-full gap-4">
       <h2 className="text-xl font-semibold text-center border-b-2 border-indigo-100">
-        Publicaciones
+        9gu notes ({visiblePosts.length})
       </h2>
       <p className="text-sm text-center text-gray-500">
         {nextRelease && `Próxima publicación: `}

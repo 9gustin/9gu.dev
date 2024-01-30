@@ -58,7 +58,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${pageWithProps.title} | ${USER_CONFIG.complementHTMLTitle}`,
       description: pageWithProps.description,
-      url: `https://9gu.dev/blog/${id}`,
+      url: `https://9gu.dev/notes/${id}`,
       siteName: "9gu.dev",
       images: [
         {
