@@ -1,15 +1,7 @@
 import { USER_CONFIG } from "@/config/user";
-import { getPage } from "@/services/notion";
-import { getPageProps, validatePage } from "@/utils/article";
 import { ClientDateHelper } from "./DateHelper";
 
-export default async function ArticleHeader({ id }: { id: string }) {
-  const page: any = await getPage(id);
-
-  const pageWithProps = getPageProps(page);
-
-  if (!pageWithProps || !validatePage(pageWithProps)) return null;
-
+export default async function ArticleHeader({ pageWithProps }: any) {
   return (
     <>
       <img

@@ -1,7 +1,12 @@
 import { propType } from "@/types/article";
 
-export const validatePage = (page: any) =>
-  page.visible && new Date(page.release_date) <= new Date();
+export const validatePage = (page: any, showPreview = false) => {
+  if (page.preview && showPreview) {
+    return true;
+  }
+
+  return page.visible && new Date(page.release_date) <= new Date();
+};
 
 const wantedProps = [
   "public_title",
@@ -9,6 +14,7 @@ const wantedProps = [
   "release_date",
   "keywords",
   "visible",
+  "preview",
   "Tags",
 ];
 

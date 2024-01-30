@@ -1,4 +1,3 @@
-import { Render } from "@9gustin/react-notion-render";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Link from "next/link";
 import "@9gustin/react-notion-render/dist/index.css";
@@ -9,10 +8,16 @@ import { Loader } from "@/components/Loader";
 import { USER_CONFIG } from "@/config/user";
 import { Metadata } from "next";
 import { getPage } from "@/services/notion";
-import { getPageProps } from "@/utils/article";
+import { getPageProps, validatePage } from "@/utils/article";
 
 export default async function Article({ params }: any) {
   if (!params?.id) return null;
+
+  const page: any = await getPage(params.id);
+
+  const pageWithProps = getPageProps(page);
+
+  if (!pageWithProps || !validatePage(pageWithProps, true)) return null;
 
   return (
     <article className="w-full flex flex-col gap-4 pt-4">
@@ -23,7 +28,7 @@ export default async function Article({ params }: any) {
           </div>
         }
       >
-        <ArticleHeader id={params.id} />
+        <ArticleHeader pageWithProps={pageWithProps} />
         <Suspense
           fallback={
             <div className="flex w-full justify-center">
