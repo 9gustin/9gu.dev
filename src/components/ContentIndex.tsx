@@ -27,12 +27,12 @@ export function ContentIndex({ pageData }: any) {
 
   return (
     <aside className="fixed bottom-24 right-4 w-44 hidden lg:flex">
-      <ul className=" border-l-violet-200 border-l-2 pl-2 flex flex-col gap-2">
+      <ul className=" border-l-indigo-200 border-l-2 pl-2 flex flex-col gap-2">
         {index.map(({ id, plainText, type }) => (
           <li key={id} className={type}>
             <a
               href={`#${rnrSlugify(plainText)}`}
-              className="hover:text-violet-500 hover:underline"
+              className="hover:text-indigo-500 hover:underline"
             >
               {plainText}
             </a>

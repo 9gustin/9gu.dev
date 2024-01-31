@@ -140,3 +140,7 @@ body {
   opacity: 1;
   text-decoration: none;
 }
+
+.rnr-container code {
+  @apply bg-indigo-100 text-neutral-900;
+}
