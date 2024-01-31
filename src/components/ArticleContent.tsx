@@ -1,6 +1,6 @@
 import { getBlocks } from "@/services/notion";
-import { Render } from "@9gustin/react-notion-render";
 import { ContentIndex } from "./ContentIndex";
+import { ClientContent } from "./ClientContent";
 
 export default async function ArticleContent({ id }: { id: string }) {
   const blocks = await getBlocks(id);
@@ -31,7 +31,7 @@ export default async function ArticleContent({ id }: { id: string }) {
 
   return (
     <>
-      <Render blocks={blocksWithChildren} useStyles classNames />
+      <ClientContent blocks={blocksWithChildren} />
       <ContentIndex pageData={blocksWithChildren} />
     </>
   );
