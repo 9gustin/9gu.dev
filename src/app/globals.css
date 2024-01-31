@@ -141,6 +141,11 @@ body {
   text-decoration: none;
 }
 
+.rnr-container ol {
+  @apply pl-4 flex flex-col gap-2;
+  list-style: decimal;
+}
+
 .rnr-container code {
   @apply bg-indigo-100 text-neutral-900;
 }
