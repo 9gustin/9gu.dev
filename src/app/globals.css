@@ -141,9 +141,14 @@ body {
   text-decoration: none;
 }
 
-.rnr-container ol {
+.rnr-container ol,
+.rnr-container ul {
   @apply pl-4 flex flex-col gap-2;
   list-style: decimal;
+}
+
+.rnr-container ul {
+  list-style: disc;
 }
 
 .rnr-container code {
