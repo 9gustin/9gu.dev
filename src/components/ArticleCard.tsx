@@ -70,7 +70,7 @@ export const ArticleCard = ({
         <Card className=" border-indigo-50">
           <CardHeader>
             <CardTitle>{title}</CardTitle>
-            <span className="text-sm text-gray-500 font-light flex gap-2 flex-wrap">
+            <span className="text-sm text-gray-500 font-light flex gap-2 flex-wrap items-center">
               <ClientDateHelper date={publishedAt} from />
               {tags && <Tags tags={tags} />}
             </span>
