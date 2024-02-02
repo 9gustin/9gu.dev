@@ -1,10 +1,10 @@
 export type Article = {
-  image: string;
-  id: string;
+  image?: string;
+  id?: string;
   title: string;
-  description: string;
+  description?: string;
   publishedAt: string;
-  url: string;
+  nextRelease?: boolean;
 };
 
 export enum propType {

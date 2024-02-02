@@ -6,7 +6,9 @@ import { Suspense } from "react";
 export default async function Home() {
   return (
     <>
-      <Hero />
+      <Suspense fallback={<Loader />}>
+        <Hero />
+      </Suspense>
       <Suspense fallback={<Loader />}>
         <Articles />
       </Suspense>

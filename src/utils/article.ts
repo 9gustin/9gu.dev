@@ -57,19 +57,16 @@ export const getNextReleaseDate = (posts: any) => {
       visible && new Date(release_date) > new Date()
   );
 
-  const nextRelease =
-    (
-      withReleaseDate.sort(function (postA: any, postB: any) {
-        return (
-          new Date(
-            (postA as any).release_date ?? (postA as any).last_edited_time
-          ).getTime() -
-          new Date(
-            (postB as any).release_date ?? (postB as any).last_edited_time
-          ).getTime()
-        );
-      })?.[0] as any
-    )?.release_date ?? null;
+  const nextRelease = withReleaseDate.sort(function (postA: any, postB: any) {
+    return (
+      new Date(
+        (postA as any).release_date ?? (postA as any).last_edited_time
+      ).getTime() -
+      new Date(
+        (postB as any).release_date ?? (postB as any).last_edited_time
+      ).getTime()
+    );
+  })?.[0] as any;
 
   return nextRelease;
 };
