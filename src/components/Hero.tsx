@@ -13,7 +13,6 @@ export async function Hero() {
     image: dbData.image,
     cover: dbData.cover,
   };
-
   return (
     <section className="flex flex-wrap items-center justify-center text-center pt-4 gap-2">
       <img
