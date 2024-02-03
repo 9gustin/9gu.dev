@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { Suspense } from "react";
 import { Loader } from "@/components/Loader";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: USER_CONFIG.htmlTitle,
@@ -31,6 +32,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );

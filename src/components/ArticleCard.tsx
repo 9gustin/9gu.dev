@@ -47,7 +47,6 @@ export const ArticleCard = ({
   nextRelease,
   Tags: tags,
 }: Article) => {
-  console.log("ArticleCard", { tags });
   if (nextRelease) {
     return (
       <Card className="bg-neutral-200 w-full">
