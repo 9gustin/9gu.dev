@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Card,
@@ -24,6 +26,7 @@ export const Tags = ({
         <button
           type="button"
           key={id}
+          disabled={!handleClickTag}
           onClick={() => handleClickTag?.(id)}
           className={cn(
             "text-xs font-semibold px-2 py-1 rounded-full border-2 border-neutral-200",
