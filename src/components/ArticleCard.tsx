@@ -29,9 +29,9 @@ export const Tags = ({
           disabled={!handleClickTag}
           onClick={() => handleClickTag?.(id)}
           className={cn(
-            "text-xs font-semibold px-2 py-1 rounded-full border-2 border-neutral-200",
+            "text-xs font-semibold px-2 py-1 rounded-full",
             colorToClass[color] || "text-gray-500 bg-gray-100",
-            handleClickTag && "cursor-pointer",
+            handleClickTag && "cursor-pointer border-2 border-neutral-200",
             selectedIds?.includes(id) && borderColor[color]
           )}
         >
